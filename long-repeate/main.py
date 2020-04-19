@@ -1,7 +1,7 @@
 def long_repeat(line):
     try:
         if line == "":
-            return(0)
+            print(0)
         numb = 1
         num_old = 1
         num_new = 1
@@ -13,9 +13,9 @@ def long_repeat(line):
                 num_new = 1
             if num_new > num_old:
                 num_old = num_new
-        return(num_old)
+        print(num_old)
     except IndexError:
-        return(num_old)
+        print(num_old)
 
 
 if __name__ == '__main__':
