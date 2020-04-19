@@ -1,13 +1,16 @@
 def checkio(words):
     list = (words.split())
-    status = True
-    for word in list:
-        try:
-            print("Inteiro:",int(word))
-            status = False
-        except ValueError:
-            if status != False:
-                status = True
+    if len(list) >= 3:
+        status = True
+        for word in list:
+            try:
+                print("Inteiro:",int(word))
+                status = False
+            except ValueError:
+                if status != False:
+                    status = True
+    else:
+        status = False
     print(status)
 
 # These "asserts" using only for self-checking and not necessary for auto-testing
