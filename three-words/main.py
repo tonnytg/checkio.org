@@ -12,7 +12,7 @@ def checkio(words):
             seq +=1
     if seq >= 3:
         return(True)
-    else
+    else:
         return(False)
 
 
