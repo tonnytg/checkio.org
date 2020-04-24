@@ -1,11 +1,15 @@
 def replace(phrase):
-    list = phrase.split()
-    new_word = 'left'
-    old_word = 'right'
-
-    for word in list:
-        print(word.replace(old_word,new_word))
-
-
+    words = ""
+    phrases = list(phrases)
+    for i in phrases:
+        if words == "":
+            words = i.replace('right','left')
+        else:
+            words = words +","+i.replace('right','left')
+    return(words)
 if __name__ == '__main__':
-    replace("Hello,baby,aright, wright")
+    replace("Hello,baby,aright,wright")
+    # replace("left","right","left","stop")
+    # replace("bright aright","ok")# == "bleft aleft,ok"
+    # replace("brightness wright",)# == "bleftness wleft"
+    # replace("enough","jokes")# == "enough,jokes"
