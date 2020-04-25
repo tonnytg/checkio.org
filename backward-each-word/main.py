@@ -6,12 +6,16 @@ def backward_string_by_word(text: str) -> str:
     # for i in range((len(text)), -1, -1):
     #     word = word + (text[i])
     # print(word)
-    letters = ''
+    words = ''
     for word in text.split():
-        for i in range((len(word)-1),-1,-1):
-            letters = letters + (word[i])
-        letters = letters + ' '
-    print(letters)
+        if words == '':
+            words = word[::-1]
+        elif words != '':
+            words = words + ' ' + word[::-1]
+    print(words)
+
+
+    #print(letters)
 
 if __name__ == '__main__':
     # print("Example:")
