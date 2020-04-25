@@ -1,18 +1,15 @@
 import datetime
 
 def days_diff(A, B):
-    print(A)
-    print(B)
+    print( A[0], A[1], A[2])
+    # A = int(A)
+    # B = int(B)
     #YYYY, M, D
     #https://docs.python.org/library/datetime
     #class datetime.datetime
     #A combination of a date and a time. Attributes: year, month, day, hour, minute, second, microsecond, and tzinfo.
-    value = str((datetime.datetime(1982, 4, 1) - datetime.datetime(1982, 4, 22) )).split(' ')
+    value = str((datetime.datetime( A[0],A[1],A[2] ) - datetime.datetime( B[0],B[1],B[2] ))).split(' ')
     print(int(value[0])*-1)
-
-    #print(datetime.strftime(%a).date(1982, 4, 19) - datetime.strftime(%a).date(1982, 4, 19) )
-    #print(datetime(*(time.strptime(a, '%d')[0:6])))
-
 
 
 
