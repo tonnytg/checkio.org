@@ -1,42 +1,26 @@
 def bigger_price(limit: int, data: list) -> list:
-    #https://py.checkio.org/mission/bigger-price
     data2 = []
+    lista = []
     for i in range(len(data)):
-        b_price = data[i]["price"]
+        lista.insert(0,data[i]["price"])
+        lista.sort(reverse=True)
+    print(lista[0])
+    print(data[1]["price"])
+
+    for h in range(limit):
         for j in range(len(data)):
-            if b_price < data[j]["price"]:
-                b_price = data[j]["price"]
-                data2.insert(0,data[j])
-    print(data2[:limit])
+            if lista[h] == data[j]["price"]:
+                print("positivo")
+                print(data[j])
+                data2.append(data[j])
 
-
-
+    print("Valor final:", data2[:limit])
 
 
 if __name__ == '__main__':
-    #from pprint import pprint
-    #     # print('Example:')
     bigger_price(2, [
-        {"name": "bread", "price": 100},
+        {"name": "bread", "price": 10},
         {"name": "wine", "price": 138},
-        {"name": "meat", "price": 15},
-        {"name": "water", "price": 1}
+        {"name": "meat", "price": 25},
+        {"name": "water", "price": 15}
     ])
-    #
-    # # These "asserts" using for self-checking and not for auto-testing
-    # assert bigger_price(2, [
-    #     {"name": "bread", "price": 100},
-    #     {"name": "wine", "price": 138},
-    #     {"name": "meat", "price": 15},
-    #     {"name": "water", "price": 1}
-    # ]) == [
-    #     {"name": "wine", "price": 138},
-    #     {"name": "bread", "price": 100}
-    # ], "First"
-    #
-    # assert bigger_price(1, [
-    #     {"name": "pen", "price": 5},
-    #     {"name": "whiteboard", "price": 170}
-    # ]) == [{"name": "whiteboard", "price": 170}], "Second"
-    #
-    # print('Done! Looks like it is fine. Go and check it')
