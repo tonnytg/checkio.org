@@ -1,4 +1,5 @@
 def bigger_price(limit: int, data: list) -> list:
+    #https://py.checkio.org/mission/bigger-price
     data2 = []
     b_price = 0
     for i in range(len(data)):
@@ -7,8 +8,6 @@ def bigger_price(limit: int, data: list) -> list:
         if b_price < data[i]["price"]:
             b_price = data[i]["price"]
             data2.insert(0,data[i])
-
-    print(b_price)
     print(data2)
 
 
