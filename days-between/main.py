@@ -9,7 +9,7 @@ def days_diff(A, B):
     #class datetime.datetime
     #A combination of a date and a time. Attributes: year, month, day, hour, minute, second, microsecond, and tzinfo.
     value = str((datetime.datetime( A[0],A[1],A[2] ) - datetime.datetime( B[0],B[1],B[2] ))).split(' ')
-    print(int(value[0])*-1)
+    print(abs(int(value[0])))
 
 
 
